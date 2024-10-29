@@ -6,7 +6,7 @@
  */
 function my_acf_init()
 {
-    acf_update_setting('google_api_key', 'AIzaSyASxy3VJBPOD2sE3Sc8XmTm7cssWPPm72o');
+    acf_update_setting('google_api_key', '');
 }
 
 add_action('acf/init', 'my_acf_init');
@@ -43,7 +43,8 @@ $social = array(
     )
 );
 
-function designdough_acf_init() {
+function designdough_acf_init()
+{
     global $menu_slug;
     global $social;
 
@@ -60,12 +61,12 @@ function designdough_acf_init() {
     /**
      * Social media group.
      */
-    acf_add_local_field_group(array (
+    acf_add_local_field_group(array(
         'key' => 'group_social',
         'title' => 'Social Media',
-        'location' => array (
-            array (
-                array (
+        'location' => array(
+            array(
+                array(
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => $menu_slug,
@@ -107,32 +108,32 @@ function designdough_acf_init() {
     /**
      * Contact details group.
      */
-    acf_add_local_field_group(array (
+    acf_add_local_field_group(array(
         'key' => 'group_contact',
         'title' => 'Contact Details',
-        'fields' => array (
-            array (
+        'fields' => array(
+            array(
                 'key' => 'field_text',
                 'label' => '<i class="fas fa-phone" style="width:20px;height:16px;display:inline-block;vertical-align:bottom;margin-right:.5em;"></i> Address Text',
                 'placeholder' => 'Enter your address',
                 'name' => 'text',
                 'type' => 'textarea',
             ),
-            array (
+            array(
                 'key' => 'field_hours',
                 'label' => '<i class="fas fa-phone" style="width:20px;height:16px;display:inline-block;vertical-align:bottom;margin-right:.5em;"></i> Openning Hours',
                 'placeholder' => 'Your openning hours',
                 'name' => 'hours',
                 'type' => 'textarea',
             ),
-            array (
+            array(
                 'key' => 'field_email',
                 'label' => '<i class="far fa-envelope" style="width:20px;height:16px;display:inline-block;vertical-align:bottom;margin-right:.5em;"></i> Email Address',
                 'placeholder' => 'Enter your email address',
                 'name' => 'email',
                 'type' => 'email',
             ),
-            array (
+            array(
                 'key' => 'field_tel',
                 'label' => '<i class="fas fa-phone" style="width:20px;height:16px;display:inline-block;vertical-align:bottom;margin-right:.5em;"></i> Telephone Number',
                 'placeholder' => 'Enter your telephone number',
@@ -140,9 +141,9 @@ function designdough_acf_init() {
                 'type' => 'text',
             ),
         ),
-        'location' => array (
-            array (
-                array (
+        'location' => array(
+            array(
+                array(
                     'param' => 'options_page',
                     'operator' => '==',
                     'value' => $menu_slug,
